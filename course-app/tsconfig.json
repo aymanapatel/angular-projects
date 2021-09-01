@@ -4,6 +4,15 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    // Module Resolution: https://www.typescriptlang.org/docs/handbook/module-resolution.html
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
