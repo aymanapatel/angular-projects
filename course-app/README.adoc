@@ -1,0 +1,8 @@
+
+
+## Prerequisite
+
+1. `npm install`
+
+2. install Firebase tools globally 
+    -  `npm i -g firebase-tools`
