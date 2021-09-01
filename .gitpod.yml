@@ -1,0 +1,26 @@
+ports:
+  - port: 4200
+    onOpen: open-preview
+  - port: 4201
+    onOpen: ignore
+  - port: 5432
+    onOpen: ignore
+    visibility: private
+  - port: 8081
+    onOpen: ignore
+    visibility: private
+
+image: gitpod/workspace-postgres
+
+tasks:
+  - init: npm install -g @angular/cli
+  - init: npm install
+    command: >
+      export NG_CLI_ANALYTICS=off &&
+      cd /workspace/brn/frontend-angular && 
+      npm run start:local
+
+github:
+  prebuilds:
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+    addComment: true
