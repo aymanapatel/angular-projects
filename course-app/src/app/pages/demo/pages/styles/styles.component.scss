@@ -1,0 +1,11 @@
+@import "/src/styles/mixins";
+
+.shadow {
+    @include shadow;
+    padding: 20px;
+}
+
+.card {
+    @include card;
+}
+

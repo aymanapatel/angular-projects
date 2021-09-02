@@ -15,7 +15,7 @@
 
 5. Generate `ng` component: `ng g component <module-name>`  
     - `<module-name>.component.ts`
-    - `<module-name>.component.sass`
+    - `<module-name>.component.scss`
     - `<module-name>.component.spect`
     - `<module-name>.component.html`
 
@@ -49,7 +49,7 @@ Component has this decorator
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.sass']
+  styleUrls: ['./header.component.scss']
 })
 ```
 
