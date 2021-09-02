@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     // Module Resolution: https://www.typescriptlang.org/docs/handbook/module-resolution.html
     "paths": {
@@ -10,7 +10,7 @@
         "app/*"
       ],
       "@src/*": [
-        "src/*"
+        "*"
       ]
     },
     "forceConsistentCasingInFileNames": true,
