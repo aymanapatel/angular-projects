@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-export type ButtonType = 'button' | 'submit'
 
+export type ButtonType = 'button' | 'submit';
 
 @Component({
   selector: 'app-button',
@@ -9,11 +9,11 @@ export type ButtonType = 'button' | 'submit'
 })
 export class ButtonComponent implements OnInit {
 
-  @Input() type: ButtonType // The name of the DOM property to which the input property is bound.
-  
-  constructor() { 
+  @Input() type: ButtonType;
+
+  constructor() {
     this.type = 'button';
-  }
+   }
 
   ngOnInit(): void {
   }

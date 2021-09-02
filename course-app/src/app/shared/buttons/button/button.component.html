@@ -1,0 +1,14 @@
+<button class="app-button" [type]="type"> 
+    <ng-content></ng-content>
+</button>
+
+<!-- 
+    Type comes from Type defined in button.component.ts
+        `export type ButtonType = 'button' | 'submit';`
+    HTML Output: 
+
+        `<button _ngcontent-mdd-c19="" class="app-button" type="button">
+            This Works (Content)
+        </button>`
+
+-->
