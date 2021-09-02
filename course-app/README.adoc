@@ -6,3 +6,61 @@
 
 2. install Firebase tools globally 
     -  `npm i -g firebase-tools`
+
+3. Generate `ng` module: `ng g module <module-name>` or `ng generate module <module-name>
+    - `<module-name>.module.ts`
+4. Generate `ng` module with routing:`ng g module <module-name> --routing`
+    - `<module-name>.module.ts`
+    - `<module-name>-routing.module.ts`
+
+5. Generate `ng` component: `ng g component <module-name>`  
+    - `<module-name>.component.ts`
+    - `<module-name>.component.sass`
+    - `<module-name>.component.spect`
+    - `<module-name>.component.html`
+
+== Angular Basics
+
+=== Root Routing
+
+`app-routing.module.ts` :
+
+Add Routes lazilly using dynamic imports
+
+```javascript
+const routes: Routes = [
+  {
+    path: '',
+    children: [
+      {
+        path: 'demo',
+        loadChildren: () => import('./pages/demo/demo.module').then(module => module.DemoModule) // lazy loading
+      }
+    ]
+  }
+];
+```
+
+=== Selector
+
+Component has this decorator
+
+```javascript
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.sass']
+})
+```
+
+The selector can be used to add the tags in html
+
+`app.component.html`:
+
+```html
+<app-header></app-header>
+```
+
+
+
+

@@ -11,7 +11,7 @@
     "build:prod": "ng build --c=prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
-  }, 
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
