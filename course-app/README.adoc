@@ -61,6 +61,45 @@ The selector can be used to add the tags in html
 <app-header></app-header>
 ```
 
+=== Shared Folder
 
+.Steps for shared feature-wise subdirectory
+[options="header"]
+|=======================
+|Number|What      |Command| Additional Info
+|1|Create Module   |`ng g module shared/parent/feature/<name>`| 
+|2|Create Component   |`ng g component shared/parent/feature/<name>`| 
+|3|Export in `shared/feature/<name>.module.ts`  a| 
+```
+import { <Name>Component } from './<name>.component' 
+@NgModule({
+  // ...    
+  exports: [
+    <Name>Component
+  ]
+})
+```|
+|4|Import and Export in `shared/parent/<name>.module.ts`  a| 
+```
+import { <Name>Component } from './feature/<name>.component' 
+@NgModule({
+  // ...    
+  imports: [
+    //
+    <Name>Component
+  ],
+  exports: [
+    <Name>Component
+  ]
+})
+```|
+|5|Add export for new module in `./feature/index.ts`  a| 
+```
+  // ...    
+  export * from './feature/<name>.module';
+})
+```|
+
+|=======================
 
 
