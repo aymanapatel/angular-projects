@@ -1,6 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 
+/* Parent component for
+*  1. Checkboxes
+*  2. Input
+*  3. Password
+*  4. Select
+*  5. Autocomplete
+*/
+
 @Component({
   selector: 'app-form-field',
   templateUrl: './form-field.component.html',
