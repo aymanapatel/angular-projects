@@ -28,7 +28,13 @@ export class SharedComponent implements OnInit {
           Validators.minLength(3),
           Validators.pattern(regex.email)
         ]
-      }]
+      }],
+      password: [null, {
+        updateOn: 'blur',
+        validators: [
+          Validators.required
+        ]
+      }],
     })
   }
 

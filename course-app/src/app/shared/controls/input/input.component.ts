@@ -47,6 +47,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
 
   // Gets value from external component and passes to form
   writeValue(value: string): void {
+    console.log(`@Input@ ${value}`);
     this.value = value;
   }  
 

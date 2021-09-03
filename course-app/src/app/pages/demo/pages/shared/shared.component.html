@@ -11,6 +11,10 @@
                     [isInline]="isInline" [patternError]="regexErrors.email">
         <app-input formControlName="input"></app-input>
     </app-form-field>
+    <app-form-field label="Password" [required]="true" [control]="form.controls.password" 
+                    [isInline]="isInline">
+        <app-password formControlName="password"></app-password>
+    </app-form-field>
 </form>
 
 <code> 
