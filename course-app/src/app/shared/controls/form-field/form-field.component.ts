@@ -30,13 +30,16 @@ export class FormFieldComponent implements OnInit {
   }
 
   hasError(): boolean  {
+
      return this.control && this.control.invalid && this.control.touched;
   }
 
    // Get first error as there can be many errors
    // TIL `get` Keyword: Bind an object property to function
    get errorKey() {
-    return this.control && this.control.errors && Object.keys(this.control.errors)[0];
+      const err =  this.control && this.control.errors && Object.keys(this.control.errors)[0];
+      console.log(`!!! ${err}`)
+      return err;
    }
 
 }

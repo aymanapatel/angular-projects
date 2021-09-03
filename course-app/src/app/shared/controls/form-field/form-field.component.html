@@ -13,7 +13,7 @@
             <ng-container *ngIf="control && errorKey" [ngSwitch]="errorKey">
                 <span *ngSwitchCase="'min'"> Minimum {{control.errors[errorKey].min}}</span>
                 <span *ngSwitchCase="'max'"> Maximum {{control.errors[errorKey].max}}</span>
-                <span *ngSwitchCase="'required'"> This field is  required</span>
+                <span *ngSwitchCase="'required'"> This field is  required OK</span>
                 <span *ngSwitchCase="'requiredtrue'">  This field is  required True</span>
                 <span *ngSwitchCase="'minlength'"> At least {{control.errors[errorKey].requiredLength}} characters</span>
                 <span *ngSwitchCase="'maxlength'"> At most {{control.errors[errorKey].requiredLength}} characters</span>

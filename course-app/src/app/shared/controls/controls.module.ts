@@ -6,6 +6,9 @@ import { PasswordModule } from './password/password.module';
 import { SelectModule } from './select/select.module';
 import { CheckboxesModule } from './checkboxes/checkboxes.module';
 import { RadiosModule } from './radios/radios.module';
+import { DateComponent } from './date/date.component';
+import { DateModule } from './date/date.module';
+import { DateRangeModule } from './date-range/date-range.module';
 
 
 
@@ -18,6 +21,8 @@ import { RadiosModule } from './radios/radios.module';
     SelectModule,
     CheckboxesModule,
     RadiosModule,
+    DateModule,
+    DateRangeModule,
     FormFieldModule
   ],
   exports: [
@@ -26,6 +31,8 @@ import { RadiosModule } from './radios/radios.module';
     SelectModule,
     CheckboxesModule,
     RadiosModule,
+    DateModule,
+    DateRangeModule,
     FormFieldModule
   ]
 })
