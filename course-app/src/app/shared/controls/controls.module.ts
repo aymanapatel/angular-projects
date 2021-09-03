@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InputModule } from './input/input.module';
 import { FormFieldModule } from './form-field/form-field.module';
 import { PasswordModule } from './password/password.module';
+import { SelectModule } from './select/select.module';
 
 
 
@@ -12,11 +13,13 @@ import { PasswordModule } from './password/password.module';
     CommonModule,
     InputModule,
     PasswordModule,
+    SelectModule,
     FormFieldModule
   ],
   exports: [
     InputModule,
     PasswordModule,
+    SelectModule,
     FormFieldModule
   ]
 })

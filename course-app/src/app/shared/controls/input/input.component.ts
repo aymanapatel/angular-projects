@@ -1,6 +1,5 @@
 import { Component, forwardRef, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Event } from '@angular/router';
 
 // https://angular.io/api/forms/ControlValueAccessor
 

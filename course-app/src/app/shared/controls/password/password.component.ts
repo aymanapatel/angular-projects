@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter, forwardRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor,NG_VALUE_ACCESSOR } from '@angular/forms';
 
 type PasswordType = 'password' | 'text';
 
@@ -16,7 +16,7 @@ type PasswordType = 'password' | 'text';
   ]
 
 })
-export class PasswordComponent implements OnInit {
+export class PasswordComponent implements OnInit, ControlValueAccessor {
 
   @Input() placeholder!: string;
   @Output() changed = new EventEmitter<string>();
