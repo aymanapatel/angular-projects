@@ -103,3 +103,25 @@ import { <Name>Component } from './feature/<name>.component'
 |=======================
 
 
+
+=== Models Folder
+
+
+=== Backend 
+
+> Firebase DB
+
+=== Frontend
+
+> Fetching data from backend for SELECT, AUTOCOMPLETE and CHECKBOXES
+attribute
+
+It had the following TS `interfaces`
+
+1. control-item
+
+2. icon
+
+3. item
+
+
