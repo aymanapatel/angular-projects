@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "outDir": "./dist/out-tsc",
+    "strictNullChecks": false, // Check better way to refactor code. Check form-field and other compoennt html
     // Module Resolution: https://www.typescriptlang.org/docs/handbook/module-resolution.html
     "paths": {
       "@app/*": [
@@ -11,7 +12,7 @@
       ],
       "@src/*": [
         "*"
-      ]
+      ],
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,

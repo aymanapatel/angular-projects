@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { regex, regexErrors } from "@app/shared/utils"
 
 @Component({
   selector: 'app-shared',
@@ -9,13 +11,24 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 export class SharedComponent implements OnInit {
 
   form!: FormGroup;
+  isInline!: boolean;
+  regexErrors = regexErrors;
 
-  constructor(private fm: FormBuilder) { }
+  constructor(private fm: FormBuilder) {
+    this.isInline = true;
+   }
 
   ngOnInit(): void {
 
     this.form = this.fm.group({
-      input: [null]
+      input: [null, {
+        updateOn: 'blur',
+        validators: [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern(regex.email)
+        ]
+      }]
     })
   }
 
@@ -24,6 +37,10 @@ export class SharedComponent implements OnInit {
   }
   onPatchValue() {
     this.form.patchValue({input: 'test'})
+  }
+
+  onToggleInline(): void {
+    this.isInline = !this.isInline;
   }
 
 }

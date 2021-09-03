@@ -1,10 +1,18 @@
 <p>Form</p>
-<app-button (click)="onPatchValue()">Patch Value</app-button>
+
 
 <form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
-    <app-input formControlName="input"></app-input>
+
+    <app-button (click)="onPatchValue()">Patch Value</app-button>
+    <app-button (click)="onToggleInline()">Toggle Inline</app-button>
+    <br/> <br/> 
+
+    <app-form-field label="Input" [required]="true" [control]="form.controls.input" 
+                    [isInline]="isInline" [patternError]="regexErrors.email">
+        <app-input formControlName="input"></app-input>
+    </app-form-field>
 </form>
 
-<code>
+<code> 
     {{ form.value | json }}
 </code>
