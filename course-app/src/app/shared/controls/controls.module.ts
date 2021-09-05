@@ -6,9 +6,9 @@ import { PasswordModule } from './password/password.module';
 import { SelectModule } from './select/select.module';
 import { CheckboxesModule } from './checkboxes/checkboxes.module';
 import { RadiosModule } from './radios/radios.module';
-import { DateComponent } from './date/date.component';
 import { DateModule } from './date/date.module';
 import { DateRangeModule } from './date-range/date-range.module';
+import { AutocompleteModule } from './autocomplete/autocomplete.module';
 
 
 
@@ -23,6 +23,7 @@ import { DateRangeModule } from './date-range/date-range.module';
     RadiosModule,
     DateModule,
     DateRangeModule,
+    AutocompleteModule,
     FormFieldModule
   ],
   exports: [
@@ -33,6 +34,7 @@ import { DateRangeModule } from './date-range/date-range.module';
     RadiosModule,
     DateModule,
     DateRangeModule,
+    AutocompleteModule,
     FormFieldModule
   ]
 })

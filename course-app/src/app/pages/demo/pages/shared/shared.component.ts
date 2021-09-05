@@ -47,6 +47,12 @@ export class SharedComponent implements OnInit {
           Validators.required
         ]
       }],
+      autocomplete: [null, {
+        updateOn: 'change',
+        validators: [
+          Validators.required
+        ]
+      }],
       select: [null, {
         updateOn: 'change',
         validators: [
