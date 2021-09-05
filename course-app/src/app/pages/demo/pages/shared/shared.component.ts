@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ControlItem } from '@app/models/frontend';
 
-import { regex, regexErrors } from "@app/shared/utils"
+import { regex, regexErrors, markFormGroupTouched } from "@app/shared/utils"
+
+// import { NotificationService } from "@app/services";
 
 @Component({
   selector: 'app-shared',
@@ -17,6 +19,8 @@ export class SharedComponent implements OnInit {
 
   // Select
   items!: ControlItem[];
+
+  showSpinner = false;
 
   constructor(private fm: FormBuilder) {
     this.isInline = true;
@@ -85,14 +89,51 @@ export class SharedComponent implements OnInit {
   }
 
   onSubmit():void {
-    console.log('Submit')
+    console.log('Submit');
+
+    if(!this.form.valid) {
+      markFormGroupTouched(this.form);
+    }
   }
   onPatchValue() {
-    this.form.patchValue({input: 'test'})
+    this.form.patchValue({
+      input: 'test@test.com',
+      password: 'password',
+      autocomplete: 1, // label: 1
+      select: 2, // label: 2
+      checkboxes: [3], // label: 3
+      radios: 4, // label: 4
+      date: new Date().getTime(),
+      dateRange: {
+        from: new Date(2019, 5, 10).getTime(),
+        to: new Date(2019, 5, 20).getTime(),
+      }
+    })
   }
 
   onToggleInline(): void {
     this.isInline = !this.isInline;
   }
+
+  onToggleDisable(): void {
+    if(this.form.enabled) {
+      this.form.disable();
+    } else {
+      this.form.enable();
+    }
+  }
+
+  onToggleSpinner(): void {
+    this.showSpinner = !this.showSpinner;
+  }
+
+  // onSuccess(): void {
+  //   this.notification.success('Everything is fine!');
+  // }
+
+  // onError(): void {
+  //   this.notification.error('OOps! Something went wrong');
+
+  // }
 
 }

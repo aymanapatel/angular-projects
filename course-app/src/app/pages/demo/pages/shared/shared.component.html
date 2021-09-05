@@ -1,10 +1,17 @@
 <p>Form</p>
 
 
+<app-button (click)="onToggleSpinner()">Toggle Spinner</app-button>
+<!-- <app-button (click)="onError()">Error</app-button>
+<app-button (click)="onSuccess()">Success</app-button> -->
+
+
 <form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
 
+    <app-button type="submit">Submit</app-button>
     <app-button (click)="onPatchValue()">Patch Value</app-button>
     <app-button (click)="onToggleInline()">Toggle Inline</app-button>
+    <app-button (click)="onToggleDisable()">Toggle Disable</app-button>
     <br/> <br/> 
 
     <app-form-field label="Input" [required]="true" [control]="form.controls.input" 
