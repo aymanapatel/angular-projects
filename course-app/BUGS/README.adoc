@@ -1,0 +1,27 @@
+= Bug Report
+Ayman Patel
+
+== Date Error (False Positive)
+
+
+image::images/DateOnErrorFormField.jpg[width=400]
+
+Date fires `onError` and data is not populated manually (see bottom)
+But date gets populated on Patch Value
+
+
+== Patch Value Button
+
+image::images/PatchNotWorking.jpg[width=400, float="left"]
+
+Patch not populating for
+
+1. Autocomplete
+2. Select
+3. Checkboxes
+4. Radios
+
+But gets populated in store. (See bottom)
+
+
+
